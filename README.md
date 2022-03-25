@@ -1,4 +1,4 @@
-# unbricking
+# Unbricking
 information on how to unbrick inMusic brand products.
 
 This tutorial requires linux, fastboot (yes the android utility), device-tree-compiler and thekikgen's mpcimg script.
