@@ -35,7 +35,7 @@ Now wait for it to finish, extracting and you are done step 2.
 
 
 
-## Step 3 - put your unit into fdu mode
+## Step 3 - put your unit into DFU mode
 On engine os its usually holding down the left and right load buttons and powering on the unit.
 On mpc the combination is hold down OVERDUB STOP PLAYSTART and then press power on.
 
