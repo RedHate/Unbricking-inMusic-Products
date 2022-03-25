@@ -138,7 +138,7 @@ fastboot flash splash splash.img
 fastboot reboot
 ````
 
-## list of partitions by disk and by name
+## List of partitions by disk and by name
 
 ````
 mmcblk1p1 uboot-spl       //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
@@ -151,7 +151,7 @@ mmcblk1p7 data            //az01-internal
 ````
 
 
-## how to create back up contents
+## How to create back up contents
 ````
 cd /media/mymemorystick
 
