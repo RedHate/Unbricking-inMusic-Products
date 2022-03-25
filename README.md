@@ -65,6 +65,7 @@ fastboot flash rootfs rootfs_extracted.img
 ````
 
 Reply from fastboot:
+````
 Code: Select all
 target reported max download size of 1879048192 bytes
 erasing 'rootfs'...
@@ -74,7 +75,7 @@ OKAY [ 59.194s]
 writing 'rootfs'...
 OKAY [ 19.450s]
 finished. total time: 81.084s
-
+````
 
 
 ## Step 6 reboot
@@ -151,17 +152,18 @@ mmcblk1p7 data            //az01-internal
 ````
 
 
-## How to create back up contents
+## How to create back up of emmc partitions
+
 ````
 cd /media/mymemorystick
 
-dd if=/dev/mmcblk1p1 uboot-spl.img
-dd if=/dev/mmcblk1p2 env.img
-dd if=/dev/mmcblk1p3 uboot.img
-dd if=/dev/mmcblk1p4 splash.img
-dd if=/dev/mmcblk1p5 recoverysplash.img
-dd if=/dev/mmcblk1p6 rootfs.img
-dd if=/dev/mmcblk1p7 data.img
+dd if=/dev/mmcblk1p1 of=uboot-spl.img
+dd if=/dev/mmcblk1p2 of=env.img
+dd if=/dev/mmcblk1p3 of=uboot.img
+dd if=/dev/mmcblk1p4 of=splash.img
+dd if=/dev/mmcblk1p5 of=recoverysplash.img
+dd if=/dev/mmcblk1p6 of=rootfs.img
+dd if=/dev/mmcblk1p7 of=data.img
 ````
 
 
