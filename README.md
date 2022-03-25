@@ -57,7 +57,7 @@ finished. total time: 0.000s
 
 
 
-## Step 5 FLASH THE ROOTFS.IMG
+## Step 5 flash the rootfs.img
 Special note, be paitent here, this takes a couple seconds to transfer to your mpc unit.
 
 ````
