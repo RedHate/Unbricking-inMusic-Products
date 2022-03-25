@@ -137,3 +137,31 @@ oem inmusic-unlock-magic-7de5fbc22b8c524e
 fastboot flash splash splash.img
 fastboot reboot
 ````
+
+## list of partitions by disk and by name
+
+````
+mmcblk1p1 uboot-spl       //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
+mmcblk1p2 env             //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
+mmcblk1p3 uboot           //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
+mmcblk1p4 splash          //the splash image that shows up when your power on normally
+mmcblk1p5 recoverysplash  //the splash image that shows up in dfu
+mmcblk1p6 rootfs          //root
+mmcblk1p7 data            //az01-internal
+````
+
+
+## how to create back up contents
+````
+cd /media/mymemorystick
+
+dd if=/dev/mmcblk1p1 uboot-spl.img
+dd if=/dev/mmcblk1p2 env.img
+dd if=/dev/mmcblk1p3 uboot.img
+dd if=/dev/mmcblk1p4 splash.img
+dd if=/dev/mmcblk1p5 recoverysplash.img
+dd if=/dev/mmcblk1p6 rootfs.img
+dd if=/dev/mmcblk1p7 data.img
+````
+
+
