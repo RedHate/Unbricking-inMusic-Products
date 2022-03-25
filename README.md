@@ -30,11 +30,18 @@ The next step is to extract the firmware into an unpacked blob, that's where the
 mpcimg extract MPC-2.X.X-Update.img Extracted.img
 ````
 
-now wait for it to finish, extracting and you are done step 2.
+Alternatively you can create dd backups of your partitions for later restoration.
+Now wait for it to finish, extracting and you are done step 2.
 
 
 
-## Step 3 - unlock the system for writing using fastboot
+## Step 3 - put your unit into fdu mode
+On engine os its usually holding down the left and right load buttons and powering on the unit.
+On mpc the combination is hold down OVERDUB STOP PLAYSTART and then press power on.
+
+
+
+## Step 4 - unlock the system for writing using fastboot
 This next command is vital to being able to write to the unit, if this doesn't work you cant restore the rootfs.
 
 ````
@@ -50,7 +57,7 @@ finished. total time: 0.000s
 
 
 
-## Step 4 FLASH THE ROOTFS.IMG
+## Step 5 FLASH THE ROOTFS.IMG
 Special note, be paitent here, this takes a couple seconds to transfer to your mpc unit.
 
 ````
@@ -70,7 +77,7 @@ finished. total time: 81.084s
 
 
 
-## Step 5 reboot
+## Step 6 reboot
 
 ````
 fastboot reboot
@@ -123,3 +130,7 @@ And voila! if all went well your machine should fire right back up into a health
 ## Special Tip
 
 if you dd your partitions to backed up .img files you can easily restore those partitions later via fastboot if you mangle them
+say you want to flash a custom bootsplash image, you can fastboot upload that to the "splash" partition by doing (keep in mind these are not png or jpeg files these are raw data)
+
+oem inmusic-unlock-magic-7de5fbc22b8c524e
+fastboot flash splash splash.img
