@@ -132,5 +132,8 @@ And voila! if all went well your machine should fire right back up into a health
 if you dd your partitions to backed up .img files you can easily restore those partitions later via fastboot if you mangle them
 say you want to flash a custom bootsplash image, you can fastboot upload that to the "splash" partition by doing (keep in mind these are not png or jpeg files these are raw data)
 
+````
 oem inmusic-unlock-magic-7de5fbc22b8c524e
 fastboot flash splash splash.img
+fastboot reboot
+````
