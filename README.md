@@ -139,7 +139,20 @@ fastboot flash splash splash.img
 fastboot reboot
 ````
 
-## List of partitions by disk and by name
+## List of partitions by disk and by name on the AKAI MPC / Force
+
+````
+mmcblk1p1 uboot-spl       //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
+mmcblk1p2 env             //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
+mmcblk1p3 uboot           //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
+mmcblk1p4 splash          //the splash image that shows up when your power on normally
+mmcblk1p5 recoverysplash  //the splash image that shows up in dfu
+mmcblk1p6 rootfs          //root
+mmcblk1p7 content         //acvs-content
+mmcblk1p8 data            //az01-internal
+````
+
+## List of partitions by disk and by name on the ENGINE OS DEVICES Denon / Numark.
 
 ````
 mmcblk1p1 uboot-spl       //DO NOT TOUCH THIS (DO NOT FASTBOOT FLASH THIS OR YOU COULD WRECK IT!)
@@ -151,8 +164,22 @@ mmcblk1p6 rootfs          //root
 mmcblk1p7 data            //az01-internal
 ````
 
+## How to create back up of emmc partitions on MPC / Force
 
-## How to create back up of emmc partitions
+````
+cd /media/mymemorystick
+
+dd if=/dev/mmcblk1p1 of=uboot-spl.img
+dd if=/dev/mmcblk1p2 of=env.img
+dd if=/dev/mmcblk1p3 of=uboot.img
+dd if=/dev/mmcblk1p4 of=splash.img
+dd if=/dev/mmcblk1p5 of=recoverysplash.img
+dd if=/dev/mmcblk1p6 of=rootfs.img
+dd if=/dev/mmcblk1p7 of=content.img
+dd if=/dev/mmcblk1p8 of=data.img
+````
+
+## How to create back up of emmc partitions on denon / numark
 
 ````
 cd /media/mymemorystick
