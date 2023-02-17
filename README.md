@@ -36,11 +36,11 @@ Now wait for it to finish, extracting and you are done step 2.
 
 
 ## Step 3 - put your unit into DFU mode
-  On Numark Mixstream Pro:
-    hold down CUE, SAVED, AUTO, and ROLL on the left deck then turn the power on.
-    (also you can get into test mode on these units by doing the same proceedure with the right deck)
+  ````
   On MPC ONE the combination to enter fastboot is
+  ````
     hold down FULL LEVEL, BROWSE and PAD BANK C. and then press power on.
+  ````
   On the Numark MIXSTREAM PRO the button combination to enter fastboot mode (upload mode) is: 
     Hold cue, saved loop, auto loop, and the roll pads on the left deck and then press power on.
 
